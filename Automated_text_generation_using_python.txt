@@ -4,7 +4,7 @@ from transformers import pipeline
 
 model = pipeline("text-generation", model="gpt2")
 
-prompt = "Hi, my name is John Cena. I am here to"
+prompt = "Hi,I am Narendra Modi,Prime Minister of India, "
 
 generated_text = model(prompt,
                        do_sample=True,
