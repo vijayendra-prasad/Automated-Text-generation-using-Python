@@ -7,11 +7,11 @@ model = pipeline("text-generation", model="gpt2")
 prompt = "Hi,I am Narendra Modi,Prime Minister of India, "
 
 generated_text = model(prompt,
-                       do_sample=True,
-                       top_k=50,
-                       temperature=0.9,
-                       max_length=100,
-                       num_return_sequences=2)
+                       do_sample=True,    
+                       top_k=50,                //  top_k=50 limits the sampling to the top 50 most likely words at each step.
+                       temperature=0.9,         //temperature=0.9 controls the degree of randomness in the sampling process.
+                       max_length=100,         //max_length=100 sets the maximum length of the generated text to 100 tokens.
+                       num_return_sequences=2)   // num_return_sequences=2 specifies that two pieces of text should be generated.
 
 for i in generated_text:
   print(i["generated_text"]) 
